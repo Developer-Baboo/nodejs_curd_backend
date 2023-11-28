@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 //create functionality
-app.get('/student', (req, res) => {
+app.post('/student', (req, res) => {
     const sql = "INSERT INTO student (`NAME`, `EMAIL`) VALUES(?)";
     const values = [
         req.body.name,
@@ -30,6 +30,18 @@ app.get('/student', (req, res) => {
 ]
     db.query(sql, [values], (err, result) => {
         if (err) return res.json(err);
+        return res.json(result);
+    })
+})
+
+
+//Read Functionality
+app.get('/read/:id', (req, res) => {
+    const sql = "SELECT * FROM student WHERE ID = ?";
+    const id = req.params.id;
+
+    db.query(sql, [id], (err, result) => {
+        if (err) return res.json({ Message: "Error inside server" });
         return res.json(result);
     })
 })
