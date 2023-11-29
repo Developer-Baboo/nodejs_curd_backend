@@ -1,0 +1,44 @@
+Validation to avoid empty fields
+
+sweet alert for success/failure message
+
+login/register
+
+image upload
+
+data table
+
+radio, checkbox, selectbox, textarea, search, date
+
+same email sa dobra register na ho
+
+forgot password
+
+email sending
+
+dashboard
+
+pdf generate
+
+npm init -y for both frontend and server
+
+npm install express mysql cors nodemon(sever)
+
+npx create-react-app my-react-app
+
+cd my-react-app
+
+npm start both frontend and server app
+
+make file in server folder as server.js file
+
+add below line of code in package.json
+"scripts":{
+"start" : "nodemon server.js";
+}
+
+
+
+
+
+
